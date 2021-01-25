@@ -1,0 +1,260 @@
+/*----------------- BUTTONS ----------------*/
+
+$buttons: ".buttons";
+
+#{$buttons} {
+  @extend %buttons;
+
+  > .buttons__a-btn {
+    @extend %a-btn;
+  }
+}
+
+/*------------------------------------------*/
+
+/*--------------- COMPONENTS ---------------*/
+
+$menu: ".menu";
+
+#{$menu} {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+
+  &__item a {
+    text-decoration: none;
+  }
+}
+
+$card-v: ".card-v";
+
+#{$card-v} {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 220px;
+  width: 140px;
+  border-radius: 18px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+
+  &__img {
+    height: 45%;
+    width: 100%;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .product-status {
+    display: flex;
+    height: 21px;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0%;
+    background: none;
+
+    .promotion {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .delete {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55%;
+    width: 100%;
+    padding: 8px;
+    border-radius: 18px;
+
+    .title {
+      font-family: $font-primary;
+      width: 100%;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .description {
+      font-family: $font-secondary;
+      font-size: 12px;
+      display: flex;
+      justify-content: start;
+    }
+
+    .id {
+      font-family: $font-secondary;
+      font-size: 12px;
+      display: flex;
+      justify-content: start;
+    }
+
+    .price {
+      font-family: $font-third;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
+
+.card-v .selected {
+}
+
+.card-v:hover {
+  background-color: aqua;
+}
+
+$card-h: ".card-h";
+
+#{$card-h} {
+  height: 210px;
+  width: 100%;
+  display: flex;
+
+  &__img {
+  }
+
+  &__texts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .title {
+    }
+
+    .description {
+    }
+
+    .price {
+    }
+  }
+}
+
+$services: ".services";
+
+#{$services} {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    height: 210px;
+    width: 140px;
+    border-radius: 24px;
+    padding: 21px;
+
+    h2 {
+      font-family: $font-primary;
+      font-size: 1.5rem;
+      height: 100%;
+      color: white;
+      display: flex;
+      align-items: flex-start;
+      text-shadow: 2px 2px 5px black;
+    }
+  }
+
+  #beer {
+    background-image: url(/assets/img/beers.jpg);
+    background-size: cover;
+  }
+
+  #food {
+    background-image: url(/assets/img/foods.jpg);
+    background-size: cover;
+  }
+
+  #drinks {
+    background-image: url(/assets/img/drinks.jpg);
+    background-size: cover;
+  }
+}
+
+$pagination: ".pagination";
+
+#{$pagination} {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+  }
+
+  &__btn .active {
+    background-color: red;
+    color: white;
+  }
+}
+
+$texts: ".texts";
+
+#{$texts} {
+  display: flex;
+
+  &__logo-b {
+    font-family: $font-logo;
+    font-size: 5em;
+    font-weight: 400;
+  }
+
+  &__logo-s {
+    font-family: $font-logo;
+    font-size: 1.75em;
+    font-weight: 300;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: $font-title-size;
+
+    display: flex;
+  }
+
+  &__subtitle {
+    font-family: $font-primary;
+    font-size: $font-subtitle-size;
+    display: flex;
+  }
+
+  &__paraph {
+    font-family: $font-primary;
+    font-size: $font-paraph-size;
+    display: flex;
+  }
+
+  &__menu {
+    font-family: $font-third;
+    font-size: $font-subtitle-size;
+    display: flex;
+  }
+}
+
+/* ✚ ✖ ‒ ⟨ ⟩  ⨯ −  < > */

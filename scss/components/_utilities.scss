@@ -1,0 +1,59 @@
+/*------------------ FONTS -----------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+//SIZES
+
+$font-sizes: (
+  title: 2.5rem,
+  subtitle: 2rem,
+  paraph: 1rem,
+  menu: 1.5rem,
+);
+
+@function font-size($size) {
+  @return map-get($map: $font-sizes, $key: $size);
+}
+
+$font-title-size: font-size(title);
+
+$font-subtitle-size: font-size(subtitle);
+
+$font-paraph-size: font-size(paraph);
+
+$font-menu-size: font-size(menu);
+
+//TYPES
+
+$font-logo: "Bree Serif", serif;
+
+$font-primary: "Assistant", sans-serif;
+
+$font-secondary: "Source Serif Pro", serif;
+
+$font-third: "Fira Sans", sans-serif;
+
+/*------------------------------------------*/
+
+/*----------------- COLORS -----------------*/
+$colors: (
+  primary: #e23e57,
+  secondary: #e45cb3,
+  third: #7ac7c4,
+  fourth: #311d3f,
+);
+
+@function colors($color) {
+  @return map-get($map: $colors, $key: $color);
+}
+
+$color-p: colors(primary);
+
+$color-s: colors(secondary);
+
+$color-t: colors(third);
+
+$color-f: colors(fourth);

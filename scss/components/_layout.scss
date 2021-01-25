@@ -1,0 +1,58 @@
+/*------------------ BASIC -----------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$index: ".index";
+
+#{$index} {
+  height: 100vh;
+  justify-content: center;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh auto auto auto auto auto;
+  grid-template-areas:
+    "home"
+    "bar-menu"
+    "promotions"
+    "products"
+    "cart"
+    "footer";
+}
+/*------------------------------------------*/
+
+/*----------------- LAYOUT -----------------*/
+
+$header: ".header";
+
+#{$header} {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 72px;
+  padding: 16px;
+
+  &__menu {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+}
+
+$footer: "#footer";
+
+#{$footer} {
+  width: 100%;
+  display: none;
+  height: 15vh;
+  background-color: black;
+  padding: 16px 32px 16px 32px;
+}
+
+/*------------------------------------------*/

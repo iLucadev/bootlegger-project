@@ -1,0 +1,246 @@
+$max-width: 640px;
+$min-width: 320px;
+
+%grid-3c {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(32px, auto);
+  grid-auto-flow: row;
+  row-gap: 16px;
+}
+
+%grid-2c {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(32px, auto);
+  grid-auto-flow: row;
+  row-gap: 16px;
+}
+
+%grid-3auto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(32px, auto);
+  grid-auto-flow: row;
+  row-gap: 16px;
+}
+
+%grid-5c {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(64px, auto);
+  grid-auto-flow: row;
+  row-gap: 16px;
+}
+
+%flex-r {
+  display: flex;
+  flex-direction: row;
+}
+
+%flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+%buttons {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+%m-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-p;
+  border-radius: 18px;
+  width: 160px;
+  height: 56px;
+  font-family: $font-third;
+  font-size: 1.25em;
+  text-decoration: none;
+}
+
+%n-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-f;
+  border-radius: 32px;
+  width: 140px;
+  height: 48px;
+  font-family: $font-third;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+%a-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: $font-primary;
+  font-size: $font-subtitle-size;
+}
+
+@mixin flex($position) {
+  /*----------- flex rows -----------*/
+  @if $position == r-hcenter-vcenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  } @else if $position == r-hcenter-vstart {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  } @else if $position == r-hcenter-vend {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+  } @else if $position == r-haround-vcenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  } @else if $position == r-haround-vstart {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  } @else if $position == r-haround-vend {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+  } @else if $position == r-hbetween-vcenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  } @else if $position == r-hbetween-vstart {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  } @else if $position == r-hbetween-vend {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  } @else if $position == r-hevenly-vcenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  } @else if $position == r-hevenly-vstart {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  } @else if $position == r-hevenly-vend {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+  }
+
+  /*---------- flex column ----------*/
+  @if $position == c-hcenter-vcenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } @else if $position == c-hcenter-vstart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  } @else if $position == c-hcenter-vend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  } @else if $position == c-haround-vcenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  } @else if $position == c-haround-vstart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  } @else if $position == c-haround-vend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+  } @else if $position == c-hbetween-vcenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  } @else if $position == c-hbetween-vstart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  } @else if $position == c-hbetween-vend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  } @else if $position == c-hevenly-vcenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  } @else if $position == c-hevenly-vstart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  } @else if $position == c-hevenly-vend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+  }
+}
+
+@mixin flex-h($position) {
+  @if $position == h-center {
+    justify-content: center;
+  } @else if $position == h-start {
+    justify-content: flex-start;
+  } @else if $position == h-end {
+    justify-content: flex-end;
+  } @else if $position == h-between {
+    align-items: space-between;
+  } @else if $position == h-evenly {
+    align-items: space-evenly;
+  } @else if $position == h-around {
+    align-items: space-around;
+  }
+}
+
+@mixin flex-v($position) {
+  @if $position == v-center {
+    align-items: center;
+  } @else if $position == v-start {
+    align-items: flex-start;
+  } @else if $position == v-end {
+    align-items: flex-end;
+  } @else if $position == v-between {
+    justify-content: space-between;
+  } @else if $position == v-evenly {
+    justify-content: space-evenly;
+  } @else if $position == v-around {
+    justify-content: space-around;
+  }
+}
