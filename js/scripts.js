@@ -22,9 +22,6 @@ $(function () {
     $("#promo").click(function (e) {
       e.preventDefault();
 
-      $("#home").hide(500);
-      $("#footer").hide(500);
-
       $("#promotions").show({
         start: function () {
           $(this).css("display", "grid");
@@ -40,9 +37,6 @@ $(function () {
 
     $("#order").click(function (e) {
       e.preventDefault();
-
-      $("#home").hide(500);
-      $("#footer").hide(500);
 
       $("#bar-menu").show({
         start: function () {
@@ -304,6 +298,18 @@ $(function () {
       
     }); */
 
+    /*-------------------------------------------------------------------------*/
+
+    /////////////////////////////// PRODUCTS PAGE ///////////////////////////////
+
+    /*------------------------------- Variables -------------------------------*/
+
+    /*------------------------------- Functions -------------------------------*/
+    $("#promotions > .buttons.cancel").click(function (e) {
+      e.preventDefault();
+
+      $("#promotions").hide(500);
+    });
     /*-------------------------------------------------------------------------*/
 
     /////////////////////////////// PRODUCTS PAGE ///////////////////////////////
