@@ -62,7 +62,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 220px;
+  height: 200px;
   width: 140px;
   border-radius: 18px;
   background-color: white;
@@ -114,7 +114,7 @@
     .card-v__texts .id {
       font-family: "Source Serif Pro", serif;
       font-size: 12px;
-      display: flex;
+      display: none;
       justify-content: start; }
     .card-v__texts .price {
       font-family: "Fira Sans", sans-serif;
@@ -127,13 +127,48 @@
   background-color: aqua; }
 
 .card-h {
-  height: 210px;
+  height: 64px;
   width: 100%;
   display: flex; }
+  .card-h__img {
+    order: 1;
+    width: 64px;
+    height: 100%; }
   .card-h__texts {
+    order: 2;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
     align-items: center; }
+    .card-h__texts .title {
+      width: 86px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 12px 0 12px;
+      font-family: "Assistant", sans-serif;
+      font-size: 16px; }
+    .card-h__texts .description {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 12px 0 12px;
+      font-family: "Source Serif Pro", serif;
+      font-size: 14px; }
+    .card-h__texts .price {
+      width: 86px;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-family: "Fira Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 600; }
+    .card-h__texts .id {
+      display: none; }
 
 .services {
   display: flex;
@@ -230,8 +265,8 @@
       grid-column: 1/-1 !important; }
     #products .logo {
       grid-column: 1/-1 !important; }
-  #products #productsContainer {
-    grid-template-columns: 1fr; } }
+  #products .productsContainer {
+    grid-template-columns: 200px; } }
 
 @media screen and (min-width: 400px) and (max-width: 559px) {
   #products {
@@ -248,20 +283,20 @@
       grid-column: 1/-1 !important; }
     #products .logo {
       grid-column: 1/-1 !important; }
-  #products #productsContainer {
-    grid-template-columns: repeat(2, 1fr); } }
+  #products .productsContainer {
+    grid-template-columns: repeat(2, 200px); } }
 
 @media screen and (min-width: 560px) and (max-width: 709px) {
-  #products #productsContainer {
-    grid-template-columns: repeat(3, 1fr); } }
+  #products .productsContainer {
+    grid-template-columns: repeat(3, 200px); } }
 
 @media screen and (min-width: 710px) and (max-width: 859px) {
-  #products #productsContainer {
-    grid-template-columns: repeat(4, 1fr); } }
+  #products .productsContainer {
+    grid-template-columns: repeat(4, 200px); } }
 
 @media screen and (min-width: 860px) and (max-width: 1280px) {
-  #products #productsContainer {
-    grid-template-columns: repeat(5, 1fr); } }
+  #products .productsContainer {
+    grid-template-columns: repeat(5, 200px); } }
 
 /*------------------------------------------*/
 /*----------------- LAYOUT -----------------*/
@@ -515,11 +550,8 @@
     height: 60vh;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(16px, auto);
-    grid-auto-flow: row;
-    row-gap: 16px;
-    column-gap: 16px; }
+    grid-auto-flow: row; }
   #products .pagination {
     grid-row: 4;
     grid-column: 1/-1;
@@ -558,8 +590,21 @@
     justify-content: start;
     align-items: center;
     height: 10vh; }
+  #cart .cartContainer {
+    grid-row: 2;
+    grid-column: 1/-1;
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: minmax(16px, auto);
+    grid-auto-flow: row; }
+  #cart .cart-total {
+    grid-row: 3;
+    grid-column: 2/3;
+    height: 5vh; }
   #cart .logo {
-    grid-row: 5;
+    grid-row: 4;
     grid-column: 1/-1;
     /*----------- flex rows -----------*/
     display: flex;
